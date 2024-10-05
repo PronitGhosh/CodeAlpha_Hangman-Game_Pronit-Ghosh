@@ -1,8 +1,5 @@
 import random as rd
-import nltk
-nltk.download('words')
-from nltk.corpus import words
-word_list=words.words()
+word_list=['python', 'hangman', 'programming', 'challenge', 'developer','apple','butterfly','rainbow','Rhino','Diamond','Lily','xylophone','watermellon','zebra','australia']
 chosen=rd.choice(word_list)
 disp=[]
 for i in chosen:
@@ -26,6 +23,7 @@ while flag1==0:
       flag=1
   if flag==1:
         print("wrong letter guessed")
+        print("number of chances left : ",(5-count))
         count+=1
         if(count==1):
             print('     |')
