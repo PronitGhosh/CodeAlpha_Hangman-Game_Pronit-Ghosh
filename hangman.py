@@ -1,10 +1,12 @@
 import random as rd
-word_list=['python', 'hangman', 'programming', 'challenge', 'developer','apple','butterfly','rainbow','Rhino','Diamond','Lily','xylophone','watermellon','zebra','australia']
+word_list=['python', 'hangman', 'programming']
 chosen=rd.choice(word_list)
 disp=[]
 for i in chosen:
      disp.append('_')
-print(disp)
+for i in disp:
+     print(i,end=" ")
+print("\n")
 count=0
 count1=0
 flag1=0
@@ -17,7 +19,9 @@ while flag1==0:
         disp[i]=player
         count1+=1
         flag=0
-        print(disp)
+        for i in disp:
+             print(i,end=" ")
+        print("\n") 
         break
     else:
       flag=1
@@ -26,31 +30,46 @@ while flag1==0:
         print("number of chances left : ",(5-count))
         count+=1
         if(count==1):
-            print('     |')
-            print('     0')
+            print('  |_____')
+            print('  |   |')
+            print('  |   0')
+            print('  |_____')
         elif(count==2):
-            print('     |')
-            print('     0')
-            print('    / ')
+            print('  |_____')
+            print('  |   |')
+            print('  |   0')
+            print('  |  / ')
+            print('  |_____')
         elif(count==3):
-            print('     |')
-            print('     0')
-            print('    /|')  
+            print('  |_____')
+            print('  |   |')
+            print('  |   0')
+            print('  |  /|')
+            print('  |_____')
             
         elif(count==4):
-            print('     |')
-            print('     0')
-            print('    /|\ ')
+            print('  |_____')
+            print('  |   |')
+            print('  |   0')
+            print('  |  /|\ ')
+            print('  |_____')
         elif(count==5):
-            print('     |')
-            print('     0')
-            print('    /|\ ')  
-            print('    /   ')
+            print('  |_____')
+            print('  |   |')
+            print('  |   0')
+            print('  |  /|\ ')
+            print('  |  /   ')
+            print('  |_____')
+
         elif(count==6):
-            print('     |')
-            print('     0')
-            print('    /|\ ')  
-            print('    / \ ')
+            print('  |_____')
+            print('  |   |')
+            print('  |   0')
+            print('  |  /|\ ')
+            print('  |  / \  ')
+            print('  |_____')
+
+           
   if(count==6):
             print("You lose")
             print("correct word is : ",chosen)
